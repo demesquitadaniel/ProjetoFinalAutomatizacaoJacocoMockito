@@ -1,28 +1,19 @@
-
-/**
+ /**
  *
- * Um carro tem os seguintes atributos:
- *  - cor
- *  - marca
- *  - modelo
- *  - ligado
- *  - velocidadeAtual
- *  - velocidadeMáxima
+ * Cada aluno deverá criar o seu próprio programa Java e realizar todos os testes.
  *
- *  Enquanto o carro estiver desligado deve ser capaz de:
- *  - Ligar
+ * *Os requisitos mínimos são: *
+ * a) Utilizar Junit 5 para todos os testes
+ * b) Criar 2 classes Service
+ * c) Criar 1 entidade
+ * d) Criar 6 métodos
+ * e) Possuir 90% de coverage
+ * f) Criar 1 teste de exception
+ * g) Utilizar mocks
+ * h) Adicionar o Jacoco ao projeto
  *
- * Enquanto o carro estiver ligado deve ser capaz de:
- * - Desligar
- * - Acelerar
- * - Frear
- * - Motrar estado atual
- *
- * Regras:
- * - O carro não pode passar de sua velocidade máxima
- * - Só podemos realizar as ações com o carro ligado
- * - Só podemos desligar o carro quando ele parar (velocidadeAtual = 0)
- * - Não existe velocidade negativa
+ * Link video explicativo: https://drive.google.com/file/d/1D3osdnhQBAhZeVPPW-AcE7PRnu3dwWeq/view?usp=share_link
+ * Link draw.io: https://drive.google.com/file/d/1ga9vDVvsfe0I4WioDKpMNQyEpWMQq8fW/view?usp=sharing
  *
  */
 
