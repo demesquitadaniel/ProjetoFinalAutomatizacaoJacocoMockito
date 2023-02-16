@@ -1,0 +1,156 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > BicicletaServiceImpl</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">service</a>
+</div>
+
+<h1>Coverage Summary for Class: BicicletaServiceImpl (service)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">BicicletaServiceImpl</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    66,7%
+  </span>
+  <span class="absValue">
+    (4/6)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    73,3%
+  </span>
+  <span class="absValue">
+    (11/15)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package service;
+&nbsp;
+&nbsp;import model.Bicicleta;
+&nbsp;
+&nbsp;import java.util.ArrayList;
+&nbsp;import java.util.HashMap;
+&nbsp;import java.util.List;
+&nbsp;import java.util.Map;
+&nbsp;
+&nbsp;public class BicicletaServiceImpl implements BicicletaService {
+&nbsp;
+<b class="fc">&nbsp;    private Map&lt;Long, Bicicleta&gt; bicicletas = new HashMap&lt;&gt;();</b>
+<b class="fc">&nbsp;    private Long proximoId = 1L;</b>
+&nbsp;    private Bicicleta bicicleta;
+&nbsp;    private double velocidadeMenos;
+&nbsp;    private double velocidadeMais;
+<b class="fc">&nbsp;</b>
+&nbsp;    public &lt;BicicletaRepository&gt; BicicletaServiceImpl(BicicletaRepository repository) {
+&nbsp;
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+<b class="fc">&nbsp;    public Bicicleta criarBicicleta(String modelo, int numMarchas, boolean eletrica, double velocidadeAtual, double velocidadeMaxima) throws Exception{</b>
+<b class="fc">&nbsp;        Bicicleta bicicleta = new Bicicleta(proximoId, modelo, numMarchas, eletrica, 0, 100);</b>
+<b class="fc">&nbsp;        bicicletas.put(proximoId, bicicleta);</b>
+<b class="fc">&nbsp;        proximoId++;</b>
+<b class="fc">&nbsp;        if ((numMarchas &lt;= 0) || (modelo == null)) {</b>
+&nbsp;            throw new Exception(&quot;Erro! Nr de marchas OU modelo inválidos&quot;);
+<b class="fc">&nbsp;        } else {</b>
+&nbsp;            return bicicleta;
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+<b class="fc">&nbsp;    public Bicicleta buscarBicicletaPorId(Long id) {</b>
+&nbsp;        return bicicletas.get(id);
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+<b class="fc">&nbsp;    public List&lt;Bicicleta&gt; buscarTodasBicicletas() {</b>
+&nbsp;        return new ArrayList&lt;&gt;(bicicletas.values());
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+<b class="nc">&nbsp;    public void pedalar(Bicicleta bicicleta, int velocidadeMais) {</b>
+&nbsp;        bicicleta.setVelocidadeAtual(bicicleta.getVelocidadeAtual() + velocidadeMais);
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+<b class="nc">&nbsp;    public void frear(Bicicleta bicicleta, int velocidadeMenos) {</b>
+<b class="nc">&nbsp;        bicicleta.setVelocidadeAtual(bicicleta.getVelocidadeAtual() - velocidadeMenos);</b>
+<b class="nc">&nbsp;    }</b>
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-02-16 12:45</div>
+</div>
+</body>
+</html>
