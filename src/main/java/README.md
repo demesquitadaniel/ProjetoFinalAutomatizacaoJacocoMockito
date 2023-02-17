@@ -1,6 +1,6 @@
 Seguindo as instruções contidas no "Main.java", foi feito um programa para o funcionamento de uma bicicleta, bem ~~~~~~~~~~~~~~~~como os seus métodos e testes.
 
-Para tal usaou-se de pesquisas de aulas, códigos anteriores, e muitas visitas ao StackOverFlow.
+Para tal usou-se de pesquisas de aulas, códigos anteriores, e muitas visitas ao StackOverFlow.
 
 Essa atividade provou-se especialmente complicada, pois os erros eram contínuos, e os testes não me mostravam como ou onde consertá-los (ou talvez eu não tenha sabido interpretá-los como deveria).
 
